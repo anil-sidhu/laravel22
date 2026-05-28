@@ -1,24 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
+Route::get('user',[UserController::class,'index']);
+Route::get('get-user',[UserController::class,'getUser']);
+Route::get('user-details/{name}',[UserController::class,'details']);
+Route::get('welcome-user',[UserController::class,'welcome']);
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::redirect("/welcome","/");
-// Route::view("/welcome","welcome");
-
-
-Route::get("/about/{name}",function($name){
-    return view('about',["name"=>$name]);
-});
-
-// Route::get("/about/sam",function(){
-//     return view('about');
-// });
-
-
-Route::get("/contact",function(){
-    return "<h1>Contact Page</h1>";
-});
