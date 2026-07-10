@@ -1,9 +1,0 @@
-<html>
-    <head>
-        <title>Signup Page</title>
-    </head>
-    <body>
-        
-    <h1>Signup Page</h1>
-    </body>
-</html>
