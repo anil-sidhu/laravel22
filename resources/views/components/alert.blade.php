@@ -1,1 +1,0 @@
-<p class="alert alert-{{$type}}" >{{$msg}}</p>
