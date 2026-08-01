@@ -4,7 +4,7 @@
     <title>Add User Form</title>
 </head>
 <body>
-    <form action="/add-user" method="get">
+    <form action="/add-user" method="post">
         @csrf
     <input type="text" name="username" placeholder="enter user name">
     <br><br>
@@ -12,6 +12,32 @@
     <br><br>
     <input type="email" name="email" placeholder="enter user email">
     <br><br>
+    <input type="date" name="dob">
+    <br><br>
+    <label for="">Gender</label>
+    <br>
+    <input type="radio" name="gender" value="male" ><span>Male</span>
+    <input type="radio" name="gender" value="female"><span>Female</span>
+
+    <br><br>
+
+        <label for="">Skills</label>
+    <br>
+    <input type="checkbox" name="skills[]" value="laravel"  ><span>Laravel</span>
+    <input type="checkbox" name="skills[]" value="react"><span>React</span>
+    <input type="checkbox" name="skills[]" value="angular"><span>Angular</span>
+
+    <br><br>
+    <select name="" id="">
+        <option value="">Select City</option>
+        <option value="noida">Noida </option>
+        <option value="delhi">Delhi</option>
+    </select>
+<br><br>
+<input type="range" name="age" min="18" max="100" >
+<br><br>
+<textarea name="bio" id=""></textarea>
+<br><br>
     <button>Add New User</button>
 
     </form>
