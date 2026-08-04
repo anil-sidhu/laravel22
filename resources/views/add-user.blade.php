@@ -39,9 +39,9 @@
 
         <label for="">Skills</label>
     <br>
-    <input type="checkbox" name="skills" value="laravel"  ><span>Laravel</span>
-    <input type="checkbox" name="skills" value="react"><span>React</span>
-    <input type="checkbox" name="skills" value="angular"><span>Angular</span>
+    <input type="checkbox" name="skills[]" value="laravel"  ><span>Laravel</span>
+    <input type="checkbox" name="skills[]" value="react"><span>React</span>
+    <input type="checkbox" name="skills[]" value="angular"><span>Angular</span>
 
     <br><br>
     <select name="" id="">

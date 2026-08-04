@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Rules\NoSpace;
+use App\Rules\Uppercase;
 
 class UserController extends Controller
 {
@@ -10,10 +12,12 @@ class UserController extends Controller
     function addUser(Request $request){
 
     $request->validate([
-        "username"=>"required | min:3",
+        "username"=>["required", "min:3", new NoSpace(), new Uppercase()],
         "phone"=>"required |  numeric | digits_between:3,12",
         "skills"=>"required | array"
 
+    ],[
+        "username.required"=>"Username can not be empty"
     ]);
         // return $request->method();
         // return $request->only(['phone',"username","dob"]);
