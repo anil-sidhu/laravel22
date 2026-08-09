@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\HelperController;
 
-Route::view('/','add-user');
-Route::post('/add-user',[UserController::class,'addUser']);
+Route::view('/','helper-view');
+Route::post('/helper',[HelperController::class,'index']);
+
+
+ 
