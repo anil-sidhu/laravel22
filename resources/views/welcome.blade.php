@@ -1,1 +1,1 @@
-<h1>Helpers</h1>
+<h1>Connect Laravel with Database</h1>
