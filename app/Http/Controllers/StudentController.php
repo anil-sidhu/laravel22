@@ -9,7 +9,7 @@ class StudentController extends Controller
 {
     //
     function index(){
-        $students= Student::all();
+       return $students= Student::all();
         return view('student',["students"=>$students]);
     }
 }
