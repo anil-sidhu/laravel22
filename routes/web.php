@@ -5,5 +5,8 @@ use App\Http\Controllers\StudentController;
 
 
 
-Route::get("/",[StudentController::class,'index']);
+Route::view("/student","student");
+Route::post("/student",[StudentController::class,'index']);
+
+Route::view("welcome","welcome");
 
