@@ -27,8 +27,16 @@ class EmployeeController extends Controller
 
     // ]);
 
-    return Employee::create($req->all());
+     Employee::create($req->all());
+
+     return redirect('show-employee');
    
    
+    }
+
+
+    function show(){
+        $data= Employee::all();
+    return view('show-employees',["employees"=>$data]);
     }
 }
