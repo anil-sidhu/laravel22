@@ -8,4 +8,8 @@ class Employee extends Model
 {
     //
     public $timestamps=false;
+
+    public $fillable=[
+        "name","email","phone"
+    ];
 }

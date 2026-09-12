@@ -10,16 +10,25 @@ class EmployeeController extends Controller
 
     function add(Request $req){
 
-    $employee= new Employee();
-    $employee->name= $req->name;
-    $employee->email= $req->email;
-    $employee->phone= $req->phone;
-    if($employee->save()){
-        return "data stored";
-    }else{
-        return "data not stored";
-    }
+    // $employee= new Employee();
+    // $employee->name= $req->name;
+    // $employee->email= $req->email;
+    // $employee->phone= $req->phone;
+    // if($employee->save()){
+    //     return "data stored";
+    // }else{
+    //     return "data not stored";
+    // }
 
-        
+    // return Employee::create([
+    //     "name"=> $req->name,
+    //     "email"=> $req->email,
+    //     "phone"=> $req->phone,
+
+    // ]);
+
+    return Employee::create($req->all());
+   
+   
     }
 }
