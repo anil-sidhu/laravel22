@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Employee;
+class EmployeeController extends Controller
+{
+    //
+
+    function add(Request $req){
+
+    $employee= new Employee();
+    $employee->name= $req->name;
+    $employee->email= $req->email;
+    $employee->phone= $req->phone;
+    if($employee->save()){
+        return "data stored";
+    }else{
+        return "data not stored";
+    }
+
+        
+    }
+}
