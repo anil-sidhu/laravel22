@@ -50,4 +50,16 @@ class EmployeeController extends Controller
        $data= Employee::find($id);
         return view("update-employee",["emp"=>$data]);
     }
+
+    function updateDB(Request $req,$id){
+         Employee::find($id)->update(
+            [
+                "name"=>$req->name,
+                "email"=>$req->email,
+                "phone"=>$req->phone,
+
+            ]
+         );
+         return redirect('show-employee');
+    }
 }

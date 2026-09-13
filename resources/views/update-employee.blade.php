@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Update  Employee</h1>
-    <form action="add-employee" method="post">
+    <form action="/update-employee/{{$emp->id}}" method="post">
         @csrf
 
         <input type="text" name="name" value="{{$emp->name}}"  placeholder="enter name">
