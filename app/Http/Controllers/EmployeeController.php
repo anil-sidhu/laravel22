@@ -39,4 +39,10 @@ class EmployeeController extends Controller
         $data= Employee::all();
     return view('show-employees',["employees"=>$data]);
     }
+
+    function delete($id){
+        Employee::find($id)->delete();
+         return redirect('show-employee');
+        
+    }
 }
