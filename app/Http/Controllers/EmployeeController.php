@@ -62,4 +62,10 @@ class EmployeeController extends Controller
          );
          return redirect('show-employee');
     }
+
+    function search(Request $req){
+        $keyword= $req->query('search-name');
+       $data= Employee::where('name',"like","%{$keyword}%")->get();
+    return view('show-employees',["employees"=>$data]);
+    }
 }

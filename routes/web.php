@@ -14,6 +14,7 @@ Route::get('delete-employee/{id}',[EmployeeController::class,'delete']);
 Route::get('update-employee/{id}',[EmployeeController::class,'update']);
 Route::post('update-employee/{id}',[EmployeeController::class,'updateDB']);
 
+Route::get('search-employee',[EmployeeController::class,'search']);
 
 
 

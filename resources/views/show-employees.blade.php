@@ -17,6 +17,10 @@
 </head>
 <body>
     <h1>Employee List</h1>
+    <form action="/search-employee" method="get">
+        <input type="text" name="search-name" placeholder="enter name">
+        <button>Search</button>
+    </form>
    <ul class="heading">
     <li>Name</li>
     <li>Email</li>
