@@ -29,7 +29,11 @@
         <li>{{$emp->name}}</li>
         <li>{{$emp->email}}</li>
         <li>{{$emp->phone}}</li>
-        <li><a href="delete-employee/{{$emp->id}}">Delete</a></li>
+        <li>
+            <a href="delete-employee/{{$emp->id}}">Delete</a>
+            <a href="update-employee/{{$emp->id}}">Update</a>
+
+        </li>
 
 
     </ul>

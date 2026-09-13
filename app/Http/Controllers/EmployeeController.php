@@ -45,4 +45,9 @@ class EmployeeController extends Controller
          return redirect('show-employee');
         
     }
+
+    function update($id){
+       $data= Employee::find($id);
+        return view("update-employee",["emp"=>$data]);
+    }
 }
