@@ -42,5 +42,9 @@
 
     </ul>
     @endforeach
+
+   <div>
+    {{$employees->links()}}
+   </div>
 </body>
 </html>

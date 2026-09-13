@@ -36,7 +36,7 @@ class EmployeeController extends Controller
 
 
     function show(){
-        $data= Employee::all();
+        $data= Employee::paginate(5);
     return view('show-employees',["employees"=>$data]);
     }
 
