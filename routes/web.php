@@ -6,7 +6,7 @@ use App\Http\Controllers\EmployeeController;
 
 
 
-Route::view('add-employee','add-employee');
+Route::view('/','add-employee');
 Route::post('add-employee',[EmployeeController::class,'add']);
 Route::get('show-employee',[EmployeeController::class,'show']);
 
